@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   return (
-      <nav className="navbar navbar-expand-lg bg-light" target="_blank" data-bs-theme="light">
+      <nav className="navbar navbar-expand-lg bg-light-logo" target="_blank" data-bs-theme="light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img src={logo} alt='Cacao.Cocoa' height="45px"/>

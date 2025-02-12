@@ -62,3 +62,11 @@
   margin: 0 auto;
   padding: 0px;
 }
+
+.bg-light-logo{
+  background-color: #FFFFFC;
+}
+
+.bg-light-body{
+  background-color: #FDF5E6;
+}

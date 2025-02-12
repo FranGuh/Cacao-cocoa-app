@@ -17,13 +17,13 @@ const App = () => {
             source="@cacao.cocoa_with_cause"
           />
           <BlogCard 
-            text="Chocolates PREMIUM y libres de GLUTEN"
-            autor="cacao.cocoa"
+            text="Chocolates libres de GLUTEN"
+            autor="cacao.cocoa2"
             source="@cacao.cocoa_with_cause"
           />
           <BlogCard 
-            text="Chocolates PREMIUM y libres de GLUTEN"
-            autor="cacao.cocoa"
+            text="Chocolates libres"
+            autor="cacao.cocoa3"
             source="@cacao.cocoa_with_cause"
           />
         </div>
@@ -45,7 +45,8 @@ const App = () => {
           <ImageCard 
           logo={product}
           text="Fresco y delicioso cacao"
-          heightImg="300px"
+          heightImg="70%"
+          widthImg="70%"
           />
         </div>
         
