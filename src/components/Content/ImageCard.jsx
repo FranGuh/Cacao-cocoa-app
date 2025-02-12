@@ -1,15 +1,13 @@
 import React from 'react';
 
-const ImageCard = ({ logo, text }) => {
+const ImageCard = ({ logo, text, heightImg }) => {
   return (
-    <div className='feed'>
       <div>
-        <img src={logo} alt='Cacao.Cocoa' height="500px"/>
+        <img src={logo} alt='Cacao.Cocoa' height={heightImg}/>
         <div className='card-content'>
           <p>{text}</p>
         </div>
       </div>
-    </div>
   )
 }
 

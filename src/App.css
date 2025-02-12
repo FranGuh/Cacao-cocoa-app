@@ -17,7 +17,7 @@
 
 
 .feed {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: center; /* Centra las tarjetas */
   gap: 20px;
@@ -32,6 +32,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
+  justify-content: center;
 }
 
 .card-content {
@@ -42,4 +43,22 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.content-display { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  max-width: 75%; 
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content-display__picture { 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 5px; 
+  max-width: 75%; 
+  margin: 0 auto;
+  padding: 0px;
 }

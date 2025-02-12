@@ -9,22 +9,46 @@ const App = () => {
       <Navbar />
       <div>
         <p>Contenido</p>
-        <BlogCard 
-          text="Chocolates PREMIUM y libres de GLUTEN"
-          autor="cacao.cocoa"
-          source="@cacao.cocoa_with_cause"
-        />
+        
+        <div className='content-display'>
+          <BlogCard 
+            text="Chocolates PREMIUM y libres de GLUTEN"
+            autor="cacao.cocoa"
+            source="@cacao.cocoa_with_cause"
+          />
+          <BlogCard 
+            text="Chocolates PREMIUM y libres de GLUTEN"
+            autor="cacao.cocoa"
+            source="@cacao.cocoa_with_cause"
+          />
+          <BlogCard 
+            text="Chocolates PREMIUM y libres de GLUTEN"
+            autor="cacao.cocoa"
+            source="@cacao.cocoa_with_cause"
+          />
+        </div>
         <p>
           
         </p>
-        <ImageCard 
+
+        <div className='content-display__picture'>
+          <ImageCard 
+            logo={product}
+            text="Fresco y delicioso cacao"
+            heightImg="300px"
+          />
+          <ImageCard 
           logo={product}
-          text="Fresco y delicioso cacao" 
-        />
-        <ImageCard 
+          text="Fresco y delicioso cacao"
+          heightImg="300px"
+          />
+          <ImageCard 
           logo={product}
-          text="Fresco y delicioso cacao" 
-        />
+          text="Fresco y delicioso cacao"
+          heightImg="300px"
+          />
+        </div>
+        
       </div>
     </div>
   )
