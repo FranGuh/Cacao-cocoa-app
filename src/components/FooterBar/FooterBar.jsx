@@ -4,9 +4,9 @@ const FooterBar = () => {
   return (
     <footer className="footer">
       <div className="row">
-        <a href="#"><i className="fa fa-facebook"></i></a>
-        <a href="#"><i className="fa fa-instagram"></i></a>
-        <a href="#"><i className="fa fa-youtube"></i></a>
+        <a href="#"><i className="fa fa-facebook">  Facebook</i></a>
+        <a href="#"><i className="fa fa-instagram">  Instagram</i></a>
+        <a href="#"><i className="fa fa-youtube">  Youtube</i></a>
         <a href="#"><i className="fa fa-twitter"></i></a>
       </div>
 

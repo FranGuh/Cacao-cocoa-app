@@ -7,6 +7,7 @@ const ImageCard = ({ logo, text, heightImg, widthImg }) => {
         <img src={logo} alt='Cacao.Cocoa' height={heightImg} width={widthImg}/>
         <div className='card-content'>
           <p>{text}</p>
+          <button>Button</button>
         </div>
       </div>
     </div>
