@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, ImageCard, BlogCard, VideoCard } from './components';
+import { Navbar, ImageCard, BlogCard, VideoCard, TextContainer, FooterBar } from './components';
 import './App.css';
 import product from './assets/Imagenes/cacao-product.png'
 import videoCocoa from './assets/video/video_cacao.mp4'
@@ -13,6 +13,7 @@ const App = () => {
           <VideoCard 
             videoSource={videoCocoa}
             videoText=" Cacao.cocoa "
+            videoText2=" Un chocolate, una sensación "
           />
         </div>
         <div className='content-display'>
@@ -33,7 +34,11 @@ const App = () => {
           />
         </div>
         <p>
-          
+        <div>
+          <TextContainer 
+            text="Productos Gluten Free!"
+          />
+        </div>
         </p>
         <div className='content-display__picture'>
           <ImageCard 
@@ -53,6 +58,7 @@ const App = () => {
           />
         </div>
       </div>
+      <FooterBar />
     </div>
   )
 }

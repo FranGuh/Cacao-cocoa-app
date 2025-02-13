@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoCard = ({videoSource, videoText}) => {
+const VideoCard = ({videoSource, videoText, videoText2}) => {
   return (
     <div className='content-display__video'>
       <video 
@@ -15,6 +15,9 @@ const VideoCard = ({videoSource, videoText}) => {
       </video>
       <div className='marca'>
         {videoText}
+      </div>
+      <div className='marca2'>
+        {videoText2}
       </div>
     </div>
   )
