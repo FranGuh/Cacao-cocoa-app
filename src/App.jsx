@@ -1,15 +1,20 @@
 import React from 'react';
-import { Navbar, ImageCard, BlogCard } from './components';
+import { Navbar, ImageCard, BlogCard, VideoCard } from './components';
 import './App.css';
 import product from './assets/Imagenes/cacao-product.png'
+import videoCocoa from './assets/video/video_cacao.mp4'
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <div>
-        <p>Contenido</p>
-        
+        <div className='content-display__video'>
+          <VideoCard 
+            videoSource={videoCocoa}
+            videoText=" Cacao.cocoa "
+          />
+        </div>
         <div className='content-display'>
           <BlogCard 
             text="Chocolates PREMIUM y libres de GLUTEN"
@@ -30,7 +35,6 @@ const App = () => {
         <p>
           
         </p>
-
         <div className='content-display__picture'>
           <ImageCard 
             logo={product}
@@ -45,11 +49,9 @@ const App = () => {
           <ImageCard 
           logo={product}
           text="Fresco y delicioso cacao"
-          heightImg="70%"
-          widthImg="70%"
+          heightImg="300px"
           />
         </div>
-        
       </div>
     </div>
   )
