@@ -43,7 +43,7 @@ const ProductCard = () => {
       {selectedProduct && (
         <div className="detail-panel">
           <h2 className='card-content__textName'>{selectedProduct.name}</h2>
-          <img src={`/Imagenes/productos/${selectedProduct.image_path}`} alt={selectedProduct.name} />
+          <img src={`/Imagenes/productos/${selectedProduct.image_path}`} alt={selectedProduct.name}/>
           <p className='card-content__description'>{selectedProduct.description}</p>
           <p className='card-content__category'>Categoría: {selectedProduct.category}</p>
           <p className='card-content__price'>Precio: ${selectedProduct.price}</p>
