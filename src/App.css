@@ -149,7 +149,7 @@
   
 }
 /* Para pantallas más pequeñas (como móviles) */
-@media (max-width: 840px) {
+@media (max-width: 800px) {
   .content-display {
     grid-template-columns: 2fr; 
   }
@@ -170,6 +170,29 @@
     left: 20%;
   }
 }
+
+@media (max-width: 1000px) {
+  .content-display {
+    grid-template-columns: 2fr; 
+  }
+  .content-display__picture {
+    grid-template-columns: 2fr; 
+  }
+  .content-display__text{
+    font-size: 50px;
+  }
+  .marca {
+    font-size: 50px;
+    bottom: 75%;
+    left: 25%;
+  }
+  .marca2 {
+    font-size: 40px;
+    bottom: 70%;
+    left: 20%;
+  }
+}
+
 
 
 
