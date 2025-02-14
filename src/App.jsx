@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Navbar, ImageCard, BlogCard, VideoCard, TextContainer, FooterBar } from './components';
 import './App.css';
-import productImg from './assets/Imagenes/cacao-product.png';
 import videoCocoa from './assets/video/video_cacao.mp4';
 
 
@@ -64,7 +63,7 @@ const App = () => {
             products.map((product) => (
               <ImageCard  
                 key={product.id}
-                logo={productImg}
+                logo={`/Imagenes/productos/${product.image_path}`}
                 text={product.description}
                 heightImg="300px"
                 nameText={product.name}
