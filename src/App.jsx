@@ -1,10 +1,31 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { Navbar, ImageCard, BlogCard, VideoCard, TextContainer, FooterBar } from './components';
 import './App.css';
-import product from './assets/Imagenes/cacao-product.png'
-import videoCocoa from './assets/video/video_cacao.mp4'
+import productImg from './assets/Imagenes/cacao-product.png';
+import videoCocoa from './assets/video/video_cacao.mp4';
+
 
 const App = () => {
+  const [products, setProducts] = useState([]);
+  
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch('http://localhost:5000/api/products')
+      .then(response => {
+        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        if (isMounted) setProducts(data);
+      })
+      .catch(error => console.error('Error al obtener productos:', error));
+      
+  
+    return () => { isMounted = false; };  // Cleanup para evitar actualizaciones en componentes desmontados
+  }, []);
+  
+
   return (
     <div>
       <Navbar />
@@ -33,29 +54,27 @@ const App = () => {
             source="@cacao.cocoa_with_cause"
           />
         </div>
-        <p>
         <div>
           <TextContainer 
             text="Productos Gluten Free!"
           />
         </div>
-        </p>
         <div className='content-display__picture'>
-          <ImageCard 
-            logo={product}
-            text="Fresco y delicioso cacao"
-            heightImg="300px"
-          />
-          <ImageCard 
-          logo={product}
-          text="Fresco y delicioso cacao"
-          heightImg="300px"
-          />
-          <ImageCard 
-          logo={product}
-          text="Fresco y delicioso cacao"
-          heightImg="300px"
-          />
+          {products.length > 0 ? (
+            products.map((product) => (
+              <ImageCard  
+                key={product.id}
+                logo={productImg}
+                text={product.description}
+                heightImg="300px"
+                nameText={product.name}
+                categoryText={product.category}
+                priceText={`${product.price}`}
+              />
+            ))
+          ) : (
+            <p>Cargando productos...</p> // Mensaje mientras se cargan los datos
+          )}
         </div>
       </div>
       <FooterBar />

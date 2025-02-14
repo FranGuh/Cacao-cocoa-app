@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, send_file;
+from flask_cors import cross_origin;
 from psycopg2 import connect, extras;
 
 app = Flask(__name__)
@@ -18,6 +19,7 @@ def get_connection():
     return conn
 
 @app.get('/api/products')
+@cross_origin(origin="http://localhost:5173")
 def get_users():
     conn = get_connection()
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
