@@ -31,16 +31,72 @@ def get_users():
     return jsonify(users)
 
 @app.post('/api/products')
-def get_users():
-    return 'Getting products'
+def post_users():
+    new_product = request.get_json()
+    name = new_product['name']
+    description = new_product['description']
+    price = new_product['price']
+    image_path = new_product['image_path']
+    category = new_product['category']
 
-@app.delete('/api/products')
-def get_users():
-    return 'Getting products'
+    conn = get_connection()
+    cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
-@app.put('/api/products')
-def get_users():
-    return 'Getting products'
+    cur.execute('INSERT INTO product (name, description, price, image_path, category) VALUES (%s, %s, %s, %s, %s) RETURNING *',
+                (name, description, price, image_path, category))
+    
+    new_created_product = cur.fetchone()
+    print(new_created_product)
+    conn.commit()
+
+    cur.close()
+    conn.close()
+
+    return jsonify(new_created_product)
+
+@app.delete('/api/products/<id>')
+def delete_users(id):
+    conn = get_connection()
+    cur = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    cur.execute('DELETE FROM product WHERE id = %s RETURNING * ', (id,))
+    product = cur.fetchone()
+
+    conn.commit()
+
+    cur.close()
+    conn.close()
+
+    if product is None:
+        return jsonify({'message': 'Product not found'}), 404
+
+    return jsonify(product)
+
+@app.put('/api/products/<id>')
+def put_users(id):
+    conn = get_connection()
+    cur = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    new_product = request.get_json()
+    name = new_product['name']
+    description = new_product['description']
+    price = new_product['price']
+    image_path = new_product['image_path']
+    category = new_product['category']
+
+    cur.execute('UPDATE product SET name= %s, description = %s, price = %s, image_path = %s, category = %s WHERE id = %s RETURNING *',
+                (name, description, price, image_path, category, id))
+    updated_user = cur.fetchone()
+    
+    conn.commit()
+
+    cur.close()
+    conn.close()
+
+    if updated_user is None:
+        return jsonify({'message': 'Product not found'}), 404
+    
+    return jsonify(updated_user)
 
 @app.get('/')
 def home():

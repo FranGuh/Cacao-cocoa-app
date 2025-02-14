@@ -3,5 +3,6 @@ CREATE TABLE product (
     name VARCHAR(100) NOT NULL,
     description VARCHAR(200),
     price FLOAT NOT NULL,
-    image_path VARCHAR(255) 
+    image_path VARCHAR(255),
+    category VARCHAR(255)
 );
