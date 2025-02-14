@@ -43,12 +43,12 @@ const App = () => {
             source="@cacao.cocoa_with_cause"
           />
           <BlogCard 
-            text="Chocolates libres de GLUTEN"
+            text="Pasión al alcance de un bocadillo sano"
             autor="cacao.cocoa2"
             source="@cacao.cocoa_with_cause"
           />
           <BlogCard 
-            text="Chocolates libres"
+            text="Para el paladar más exigente"
             autor="cacao.cocoa3"
             source="@cacao.cocoa_with_cause"
           />
@@ -58,7 +58,7 @@ const App = () => {
             text="Productos Gluten Free!"
           />
         </div>
-        <div className='content-display__picture'>
+        <div className='content-display__picture content-pattern-background'>
           {products.length > 0 ? (
             products.map((product) => (
               <ImageCard  

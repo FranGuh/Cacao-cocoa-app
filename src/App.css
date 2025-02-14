@@ -27,8 +27,8 @@
 
 .card {
   width: 300px; /* Tamaño fijo Instagram */
-  background: #fdeee6;
-  border-radius: 10px;
+  background: #fff3eb;
+  /*border-radius: 10px;*/
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
@@ -36,7 +36,7 @@
 }
 
 .card-productFrame:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -52,9 +52,9 @@
 
 
 .card-content__textName{
-  background-color: #88755a;
+  background-color: #c2b39e;
   font-size: 30px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   color: #FFFFFC;
   font-style: italic;
 }
@@ -68,14 +68,14 @@
 }
 
 .card-content__category{
-  background-color: #423d35;
+  background-color: #423c35;
   font-size: 20px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   color: #FFFFFC;
 }
 
 .card-content__textName:hover {
-  background-color: #5a4d3b;
+  background-color: #5d4f40;
   }
 
 
@@ -120,10 +120,14 @@
   width: 100%; /* Ocupa todo el ancho disponible */
   text-align: center;
   font-size: 100px ;
-  background-color: 	#675e51;
+  background-color: 	#958f86;
   color: #FFFFFC;
 }
 
+.content-pattern-background {
+  background-image: url("./assets/Imagenes/patterns/pattern3.png");
+  background-size: cover;
+}
 
 .marca { position: absolute; bottom: 16%; left: 7%;
   font-family: Arial;
@@ -174,7 +178,7 @@
 }
 
 .bg-light-body{
-  background-color: #cdbaad;
+  background-color: #f2f2f2;
 }
 
 
@@ -196,7 +200,7 @@
 }
 
 .footer a:hover {
-  color: #ff4500;
+  color: #ffc400;
 }
 
 .footer ul {
