@@ -149,6 +149,7 @@
   background-color: rgba(2, 2, 2, 0.8) ;
   
 }
+
 /* Para pantallas más pequeñas (como móviles) */
 @media (max-width: 800px) {
   .content-display {

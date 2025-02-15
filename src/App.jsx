@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar } from './components';
+import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard } from './components';
 import './App.css';
 import videoCocoa from './assets/video/video_cacao.mp4';
 
@@ -41,6 +41,20 @@ const App = () => {
         </div>
         <div className='content-display__picture content-pattern-background'>
           <ProductCard />
+        </div>
+        <div>
+
+          {/* A partir de aqui trabajen el blog */}
+          <TextContainer 
+            text="Mi blog!"
+          />
+
+          {/* Ejemplo como colocar el blog */}
+          <ImageCard 
+            text="hola"
+            nameText="Mi primer articulo"
+            logo="c.png"
+          />
         </div>
       </div>
       <FooterBar />
