@@ -4,6 +4,7 @@ import React from 'react'
 const InfoComponent = () => {
   return (
     <div>
+      InfoComponent
       {/* Aqui va el componente de la informacion */}
       {/* Se pueden basar en el componente ImageCard.jsx */}
     </div>

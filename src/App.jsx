@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard } from './components';
+import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard , InfoComponent, PersonalInfo } from './components';
 import './App.css';
 import videoCocoa from './assets/video/video_cacao.mp4';
 
@@ -54,6 +54,17 @@ const App = () => {
             text="hola"
             nameText="Mi primer articulo"
             logo="c.png"
+          />
+
+          <InfoComponent 
+            // Aqui se pasan parametros en caso de necesitarlos
+          />
+        </div>
+
+        <div>
+          {/* Aqui el componente informacion de la empresa o dueña */}
+          <PersonalInfo 
+            
           />
         </div>
       </div>
