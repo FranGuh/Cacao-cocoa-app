@@ -6,3 +6,4 @@ export { default as TextContainer } from './Content/TextContainer';
 export { default as FooterBar } from './FooterBar/FooterBar';
 export { default as ProductModel } from './Content/ProductModal';
 export { default as ProductCard } from './Products/Product/ProductCard';
+export { default as InfoComponent } from './Content/BlogComponents/InfoComponent';

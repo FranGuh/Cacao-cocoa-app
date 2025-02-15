@@ -2,6 +2,7 @@ import React from 'react'
 
 const ProductModal = () => {
   return (
+    // Este componente no hace nada
     <div>
       <div className="modal">
         <div className="modal-dialog" role="document">
