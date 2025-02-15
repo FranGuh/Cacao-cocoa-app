@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Este modulo sirve para importar productos, blog de notas y recibe esos parametros
 const ImageCard = ({ logo, text, nameText, priceText, categoryText, heightImg, widthImg, onClick }) => {
   return (
     <div className='content-display'>
