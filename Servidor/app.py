@@ -20,20 +20,21 @@ def get_connection():
 
 @app.get('/api/products')
 @cross_origin(origin="http://localhost:5173")
-def get_users():
+def get_products():
     conn = get_connection()
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
     cur.execute('SELECT * FROM product')
-    users = cur.fetchall()
+    products = cur.fetchall()
 
     cur.close()
     conn.close()
 
-    return jsonify(users)
+    return jsonify(products)
+
 
 @app.post('/api/products')
-def post_users():
+def post_products():
     new_product = request.get_json()
     name = new_product['name']
     description = new_product['description']
@@ -56,8 +57,25 @@ def post_users():
 
     return jsonify(new_created_product)
 
+@app.get('/api/products/<id>')
+@cross_origin(origin="http://localhost:5173")
+def get_product(id):
+    conn = get_connection()
+    cur = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    cur.execute('SELECT * FROM product WHERE id = %s', (id,))
+    product = cur.fetchone()
+
+    cur.close()
+    conn.close()
+    
+    if product is None:
+        return jsonify({'message': 'Product not found'}), 404
+
+    return jsonify(product)
+
 @app.delete('/api/products/<id>')
-def delete_users(id):
+def delete_products(id):
     conn = get_connection()
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
@@ -75,7 +93,7 @@ def delete_users(id):
     return jsonify(product)
 
 @app.put('/api/products/<id>')
-def put_users(id):
+def put_products(id):
     conn = get_connection()
     cur = conn.cursor(cursor_factory=extras.RealDictCursor)
 
@@ -88,17 +106,17 @@ def put_users(id):
 
     cur.execute('UPDATE product SET name= %s, description = %s, price = %s, image_path = %s, category = %s WHERE id = %s RETURNING *',
                 (name, description, price, image_path, category, id))
-    updated_user = cur.fetchone()
+    updated_product = cur.fetchone()
     
     conn.commit()
 
     cur.close()
     conn.close()
 
-    if updated_user is None:
+    if updated_product is None:
         return jsonify({'message': 'Product not found'}), 404
     
-    return jsonify(updated_user)
+    return jsonify(updated_product)
 
 @app.get('/')
 def home():

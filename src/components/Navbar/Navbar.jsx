@@ -16,8 +16,8 @@ const Navbar = () => {
               <li className="nav-item">
                 <a className="nav-link active" href="#">Home <span className="visually-hidden">(current)</span></a>
               </li>
-              <li className="nav-item"><a className="nav-link" href="#">Features</a></li>
-              <li className="nav-item"><a className="nav-link" href="#">About Us</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Products</a></li>
+              <li className="nav-item"><a className="nav-link" href="#">Blog</a></li>
             
             </ul>
           </div>

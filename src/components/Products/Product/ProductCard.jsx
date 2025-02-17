@@ -4,6 +4,8 @@ import { ImageCard } from '../../index';
 const ProductCard = () => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // Estado para producto seleccionado
+  const [updatedPrice, setUpdatedPrice] = useState(null);
+  const [selectedSize, setSelectedSize] = useState('normal');
 
   useEffect(() => {
     let isMounted = true;
@@ -20,6 +22,19 @@ const ProductCard = () => {
     return () => { isMounted = false; }; // Cleanup para evitar fugas de memoria
   }, []);
 
+  const handleSelectProduct = (product) => {
+    setSelectedProduct(product);
+    setUpdatedPrice(product.price); // Inicializa con precio original
+    setSelectedSize('normal'); 
+  };
+
+  const sizeOptions = {
+    normal: 1,
+    grande: 1.5,
+    caja: 12
+  };
+
+
   return (
     <div className='content-display'>
       {products.length > 0 ? (
@@ -29,10 +44,7 @@ const ProductCard = () => {
             logo={`/Imagenes/productos/${product.image_path}`}
             heightImg="300px"
             nameText={product.name}
-            // categoryText={product.category}
-            // text={product.description}
-            // priceText={`$${product.price}`}
-            onClick={() => setSelectedProduct(product)} 
+            onClick={() => handleSelectProduct(product)}
           />
         ))
       ) : (
@@ -46,7 +58,24 @@ const ProductCard = () => {
           <img src={`/Imagenes/productos/${selectedProduct.image_path}`} alt={selectedProduct.name}/>
           <p className='card-content__description'>{selectedProduct.description}</p>
           <p className='card-content__category'>Categoría: {selectedProduct.category}</p>
-          <p className='card-content__price'>Precio: ${selectedProduct.price}</p>
+          {/* Botones para cambiar precio */}
+          <div className="price-buttons">
+            <p className='card-content__size'>Tamaños
+            {Object.entries(sizeOptions).map(([size, multiplier]) => (
+              <button 
+                key={size} 
+                onClick={() => { 
+                  setUpdatedPrice(selectedProduct.price * multiplier); 
+                  setSelectedSize(size); 
+                }}
+                disabled={selectedSize === size} //  botón seleccionado inactivo
+              >
+                {size.charAt(0).toUpperCase() + size.slice(1)}
+              </button>
+            ))}
+            </p>
+          </div>
+          <p className='card-content__price'>Precio: ${updatedPrice.toFixed(2)}</p>
           <button onClick={() => setSelectedProduct(null)}>Cerrar</button>
         </div>
       )}
