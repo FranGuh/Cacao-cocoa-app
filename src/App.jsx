@@ -15,9 +15,11 @@ const App = () => {
         <div className='content-display__video'>
           <VideoCard 
             videoSource={videoCocoa}
-            videoText=" Cacao.cocoa "
-            videoText2=" Un chocolate, una sensación "
           />
+          <div className='video-text-overlay'>
+            <h2>Cacao.cocoa</h2>
+            <p>Un chocolate, una sensación</p>
+          </div>
         </div>
         <div className='content-display'>
           <BlogCard 
@@ -46,22 +48,12 @@ const App = () => {
           <ProductCard />
         </div>
 
-
-        <div className='content-display__video video-container'>
-          <VideoCard
-            videoSource={videoChocolate}
-          />
-          <div className='video-text-overlay'>
-            <h2>El mejor chocolate</h2>
-            <p>Disfruta de cada bocado</p>
-          </div>
-        </div>
         
         <div>
 
           {/* A partir de aqui trabajen el blog */}
           <TextContainer 
-            text="Mi blog!"
+            text="Newsletter!"
           />
 
         
@@ -113,6 +105,40 @@ const App = () => {
             />
           </div>
         </div>
+
+        
+        <div className='content-display__video video-container'>
+          <VideoCard
+            videoSource={videoChocolate}
+          />
+          <div className='video-text-overlay'>
+            <h2>El mejor chocolate</h2>
+            <p>Disfruta de cada bocado</p>
+          </div>
+        </div>
+
+
+        {/* <div className='content-pattern-background2'>
+          <TextContainer 
+            text="Conoce más en mis redes!"
+          />
+          <div className='content-display'>
+            <ImageCard 
+              nameText="Más videos en tiktok"
+              logo="/Imagenes/productos/tiktok.png"
+            />
+            <ImageCard 
+              nameText="Inspirate en Instagram"
+              logo="/Imagenes/productos/instagram.png"
+            />
+            <ImageCard 
+              nameText="Mis pensamientos en Threads"
+              logo="/Imagenes/productos/threads.png"
+            />
+            
+  
+          </div>
+        </div> */}
         
 
       </div>
