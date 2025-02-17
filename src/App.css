@@ -133,10 +133,47 @@
   color: #FFFFFC;
 }
 
+.video-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.video-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.video-text-overlay h2 {
+  font-size: 60px;
+}
+
+.video-text-overlay p:hover{
+  color: #ffbc12; 
+}
+
+
 .content-pattern-background {
   background-image: url("./assets/Imagenes/patterns/pattern3.png");
   background-size: cover;
 }
+
+.content-pattern-background2 {
+  background-image: url("./assets/Imagenes/patterns/patternMosaic.jpg");
+  background-size: cover;
+}
+
+
 
 .marca { position: absolute; bottom: 16%; left: 7%;
   font-family: Arial;
