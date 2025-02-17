@@ -1,0 +1,66 @@
+[
+    {
+      "category": "Semisweet and dark Clouds",
+      "description": "Nubes premium chocolate con leche, sin glutten",
+      "id": 1,
+      "image_path": "Milk_chocolate.png",
+      "name": "Milk Chocolate",
+      "price": 25.5
+    },
+    {
+      "category": "Clouds (white chocolate)",
+      "description": "Nubes premium de chocolate con matcha, sin glutten",
+      "id": 2,
+      "image_path": "Matcha.png",
+      "name": "Matcha",
+      "price": 30.5
+    },
+    {
+      "category": "Seasonal flavor clouds",
+      "description": "Nubes premium de chocolate sabor de temporada, sin glutten",
+      "id": 3,
+      "image_path": "Eggnog.png",
+      "name": "Eggnog",
+      "price": 31.5
+    },
+    {
+      "category": "Clouds (White chocolate)",
+      "description": "Nubes crujientes premium de leche dorada, sin gluten ",
+      "id": 4,
+      "image_path": "Golden Milk.png",
+      "name": "Golden Milk",
+      "price": 32.0
+    },
+    {
+      "category": "Clouds (White chocolate)",
+      "description": "Nubes crujientes premium de maple, sin gluten",
+      "id": 5,
+      "image_path": "Maple.png",
+      "name": "Maple",
+      "price": 30.5
+    },
+    {
+      "category": "Truffles",
+      "description": "Trufas veganas premium sin lácteos y libres de proteínas animales",
+      "id": 6,
+      "image_path": "Vegan Truffles.png",
+      "name": "Vegan Truffles",
+      "price": 36.0
+    },
+    {
+      "category": "Semisweet and dark Clouds",
+      "description": "Nubes crujientes premium de jengibre, picantes, sin frutos secos y gluten free ",
+      "id": 7,
+      "image_path": "Ginger.png",
+      "name": "Ginger",
+      "price": 33.0
+    },
+    {
+      "category": "Semisweet and dark Clouds",
+      "description": "Nubes crujientes premium de menta, libres de gluten",
+      "id": 8,
+      "image_path": "Peppermint.png",
+      "name": "Peppermint",
+      "price": 33.5
+    }
+  ]

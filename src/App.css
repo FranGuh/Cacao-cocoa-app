@@ -15,14 +15,11 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-.nav-item:hover {
-  background-color: #f5f5f5;
-}
 
 .feed {
   display: grid;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* Centra las tarjetas */
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -31,6 +28,7 @@
 .card {
   width: 300px; /* Tamaño fijo Instagram */
   background: #fff3eb;
+  /*border-radius: 10px;*/
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
@@ -57,6 +55,7 @@
 .card-content__textName{
   background-color: #c2b39e;
   font-size: 30px;
+  /*border-radius: 10px;*/
   color: #FFFFFC;
   font-style: italic;
 }
@@ -71,15 +70,9 @@
 
 .card-content__category{
   background-color: #423c35;
-  font-size: 22px;
+  font-size: 20px;
+  /*border-radius: 10px;*/
   color: #FFFFFC;
-}
-
-.card-content__size{
-  background-color: #c2b39e;
-  font-size: 22px;
-  color: #FFFFFC;
-  font-style: bold;
 }
 
 .card-content__textName:hover {
@@ -144,13 +137,7 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 2, 2, 0.8) ;
-  transition: color 0.3s ease, transform 0.3s ease
   
-}
-
-.marca:hover {
-  color: #ffc400;
-  transform: scale(1.01);
 }
 
 .marca2 { position: absolute; bottom: 1%; left: 17%;
@@ -160,13 +147,7 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 2, 2, 0.8) ;
-  transition: color 0.3s ease, transform 0.3s ease
   
-}
-
-.marca2:hover {
-  color: #ffc400;
-  transform: scale(1.01);
 }
 
 /* Para pantallas más pequeñas (como móviles) */
@@ -239,7 +220,6 @@
 
 .detail-panel button {
   margin-top: 10px;
-  margin: 7px;
   background: #ff8521;
   color: white;
   border: none;
@@ -247,13 +227,6 @@
   cursor: pointer;
   border-radius: 5px;
 }
-
-.price-buttons button:disabled {
-  opacity: 0.5; /* Hace el botón más transparente */
-  cursor: not-allowed; /* Cambia el cursor */
-  background-color: #583b21; /* Color gris para indicar deshabilitado */
-}
-
 
 
 
@@ -296,3 +269,157 @@
   display: inline;
   margin: 0 10px;
 }
+
+/*aqui prueba blog*/
+
+.blog-section {
+  padding: 2rem;
+  /*background-color: #f7f7f7;*/
+  margin-top: 20px;
+}
+
+.blog-section .card {
+  width: 100%; /* Se ajusta automáticamente */
+  background-color: #fff3eb;
+  /*border-radius: 10px;*/
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.blog-section .card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.blog-section .card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.blog-section .card p.text-sm {
+  font-size: 0.875rem;
+  color: #7a7a7a;
+  margin-bottom: 0.75rem;
+}
+
+.blog-section .card p.text-base {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.blog-section .card button {
+  background-image: url('./assets/imagenes/patterns/goldBg.jpg'); /* Ruta de la imagen */
+  background-size: cover; /* Asegura que la imagen cubra todo el botón */
+  background-position: center; /* Centra la imagen */
+  color: rgb(78, 70, 16);
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  transition: background-color 0.9s ease;
+  border: none; /* Elimina el borde */
+}
+
+/* Estilo del botón al pasar el mouse por encima */
+.blog-section .card button:hover {
+  background-image: url('./assets/imagenes/patterns/goldBgg.jpg'); /* Cambiar la imagen de fondo al hover */
+  background-size: cover;
+  background-position: center;
+  border-color: white; /* Agrega borde blanco al pasar el cursor */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Agrega sombra al hover */
+}
+
+/*.blog-section .card button:hover {
+  background-color: #f59e0b; /* Amarillo más oscuro */
+/*}*/
+
+/* Asegurando que las tarjetas no se vean afectadas por otros estilos */
+.blog-section .card-productFrame {
+  /* No afectado por .card-productFrame en otro lugar */
+}
+
+.blog-section .grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .blog-section .grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tabletas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-section .grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorios */
+  }
+}
+
+/*prueba 2*/
+
+.blog-section .card {
+  width: 100%;
+  height: 250px; /* Ajusta la altura */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-section .card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white; /* Hace que el texto sea visible */
+  margin-bottom: 0.5rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  padding: 8px 16px;
+}
+
+/*imagen principal de blog*/
+.background-div {
+  background-image: url('/Imagenes/productos/lineaD.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /*padding: 10px;*/
+  margin: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(105, 99, 10);
+}
+
+/*h1 elegante*/
+.elegant-title {
+  font-family: "Playfair Display", serif; /* Fuente elegante */
+  font-size: 3rem; /* Tamaño grande */
+  font-weight: bold;
+  color: #4a3f35; /* Marrón oscuro elegante */
+  text-transform: uppercase; /* Letras mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  text-align: center;
+  
+  background: linear-gradient(to right, #d4af37, #b8860b); /* Efecto dorado */
+  -webkit-background-clip: text; /* Clip del fondo al texto */
+  -webkit-text-fill-color: transparent; /* Hace que el texto tome el gradiente */
+
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 3px solid #d4af37; /* Línea dorada abajo */
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+
