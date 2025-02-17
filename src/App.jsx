@@ -1,7 +1,8 @@
 import { React } from 'react';
-import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard , InfoComponent, PersonalInfo } from './components';
+import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard } from './components';
 import './App.css';
 import videoCocoa from './assets/video/video_cacao.mp4';
+import { BlogSection } from './components';
 
 
 const App = () => {
@@ -49,23 +50,27 @@ const App = () => {
             text="Mi blog!"
           />
 
+        <div className="background-div">
+          <img 
+          src="/public/imagenes/productos/1.png" 
+          alt="Producto 1" 
+          style={{ width: '500px', borderRadius: '10px' }} 
+          />
+          <h1 className="elegant-title">Soy Carla Olivares</h1>
+        </div>
+
           {/* Ejemplo como colocar el blog */}
-          <ImageCard 
+          {/*<ImageCard 
             text="hola"
             nameText="Mi primer articulo"
             logo="c.png"
-          />
-
-          <InfoComponent 
-            // Aqui se pasan parametros en caso de necesitarlos
-          />
-        </div>
-
-        <div>
-          {/* Aqui el componente informacion de la empresa o dueña */}
-          <PersonalInfo 
-            
-          />
+          />*/}
+        <div className='content-pattern-background'>
+          <BlogSection />
+          <BlogSection />
+          <BlogSection />
+                   
+        </div>                  
         </div>
       </div>
       <FooterBar />
