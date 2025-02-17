@@ -15,6 +15,9 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.nav-item:hover {
+  background-color: #f5f5f5;
+}
 
 .feed {
   display: grid;
@@ -28,7 +31,6 @@
 .card {
   width: 300px; /* Tamaño fijo Instagram */
   background: #fff3eb;
-  /*border-radius: 10px;*/
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   text-align: center;
@@ -55,7 +57,6 @@
 .card-content__textName{
   background-color: #c2b39e;
   font-size: 30px;
-  /*border-radius: 10px;*/
   color: #FFFFFC;
   font-style: italic;
 }
@@ -70,9 +71,16 @@
 
 .card-content__category{
   background-color: #423c35;
-  font-size: 20px;
+  font-size: 22px;
   /*border-radius: 10px;*/
   color: #FFFFFC;
+}
+
+.card-content__size{
+  background-color: #c2b39e;
+  font-size: 22px;
+  color: #FFFFFC;
+  font-style: bold;
 }
 
 .card-content__textName:hover {
@@ -137,7 +145,13 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 2, 2, 0.8) ;
+  transition: color 0.3s ease, transform 0.3s ease;
   
+}
+
+.marca:hover {
+  color: #ffc400;
+  transform: scale(1.01);
 }
 
 .marca2 { position: absolute; bottom: 1%; left: 17%;
@@ -147,7 +161,13 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(2, 2, 2, 0.8) ;
+  transition: color 0.3s ease, transform 0.3s ease;
   
+}
+
+.marca2:hover {
+  color: #ffc400;
+  transform: scale(1.01);
 }
 
 /* Para pantallas más pequeñas (como móviles) */
@@ -220,6 +240,7 @@
 
 .detail-panel button {
   margin-top: 10px;
+  margin: 7px;
   background: #ff8521;
   color: white;
   border: none;
@@ -228,6 +249,11 @@
   border-radius: 5px;
 }
 
+.price-buttons button:disabled {
+  opacity: 0.5; /* Hace el botón más transparente */
+  cursor: not-allowed; /* Cambia el cursor */
+  background-color: #583b21; /* Color gris para indicar deshabilitado */
+}
 
 
 .bg-light-logo{
@@ -423,3 +449,8 @@
 }
 
 
+.post-image {
+  width: 70%;
+  display: block;
+  margin: 1rem auto; /* Margen arriba y abajo, centra horizontalmente */
+}

@@ -4,7 +4,7 @@ const FullscreenModal = ({ isOpen, onClose, content }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2">
+    <div className="detail-panel">
       <div className="bg-white w-full h-full max-w-5xl max-h-[calc(100vh-20px)] p-6 rounded-lg shadow-lg overflow-y-auto relative">
         {/* Botón de cerrar */}
         <button 

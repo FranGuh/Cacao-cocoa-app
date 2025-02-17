@@ -52,7 +52,7 @@ const App = () => {
 
         <div className="background-div">
           <img 
-          src="/public/imagenes/productos/1.png" 
+          src="/Imagenes/productos/1.png" 
           alt="Producto 1" 
           style={{ width: '500px', borderRadius: '10px' }} 
           />

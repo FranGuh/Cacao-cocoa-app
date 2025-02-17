@@ -66,7 +66,7 @@ const BlogSection = () => {
           content={
             <div>
               <h2 className="text-2xl font-bold">{selectedPost.title}</h2>
-              <img src={selectedPost.image} alt={selectedPost.title} className="w-full mt-4" />
+              <img src={selectedPost.image} alt={selectedPost.title} className="post-image" />
               <p className="mt-2">{selectedPost.content}</p>
             </div>
           }
