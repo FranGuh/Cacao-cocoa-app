@@ -12,20 +12,26 @@ const App = () => {
   
   return (
     <div>
-      <Navbar setSeccionActiva={setSeccionActiva}/>
+        <Navbar setSeccionActiva={setSeccionActiva} seccionActiva={seccionActiva}/>
       <div>
 
         {seccionActiva === 'inicio' && (
         <section id="inicio">
-          <div className='content-display__video'>
-            <VideoCard 
-              videoSource={videoCocoa}
+          <TextContainer 
+              text="Productos Gluten Free!"
             />
-            <div className='video-text-overlay'>
-              <h2>Cacao.cocoa</h2>
-              <p>Un chocolate, una sensación</p>
+          <div className='video-container'>
+            <div className='content-display__video'>
+              <VideoCard 
+                videoSource={videoCocoa}
+              />
+              <div className='video-text-overlay'>
+                <h2>Cacao.cocoa</h2>
+                <p>Un chocolate, una sensación</p>
+              </div>
             </div>
           </div>
+          
 
           <div className='content-display'>
             <BlogCard 

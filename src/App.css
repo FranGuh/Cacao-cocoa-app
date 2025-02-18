@@ -12,6 +12,30 @@
   transition: transform 0.3s ease;
 }
 
+.navbar-content{
+  position: fixed;
+  opacity: 90%;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.active-link {
+  font-weight: bold;
+  color: #b0a99f !important;
+  border-bottom: 2px solid #b0a99f;
+}
+
+.body-content {
+  padding-top: 130px; /* Ajusta según la altura de la navbar */
+}
+
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -61,14 +85,19 @@
 }
 
 .card-productFrame {
-  background-color: #dac6ad54;
+  background-color: #b0a99f2d ;
 }
 
 .card-productFrame:hover {
   transform: scale(1.01);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(45deg, rgb(55, 36, 18), #5a4408);
   background-color: #ffffff;
+}
+
+.card-productFrame:hover p {
+  color: #dda509;
 }
 
 
@@ -174,7 +203,7 @@
   position: relative;
   width: 100%;
   text-align: center;
-  font-size: 4.5rem; /* Ajusté el tamaño para hacerlo más accesible y adaptable */
+  font-size: 3.7rem; /* Ajusté el tamaño para hacerlo más accesible y adaptable */
   background-color: #b0a99f; /* Color de fondo más suave */
   color: #fdfdfd; /* Blanco suave para mayor contraste */
   padding: 20px; /* Espaciado interno para darle más espacio alrededor del texto */
@@ -190,29 +219,39 @@
   background-color: #8f8771; /* Cambia el fondo al pasar el ratón */
 }
 
-
 .video-container {
   position: relative;
-  display: inline-block;
   width: 100%;
+  height: 70vh; /* Ocupa el 30% del alto de la pantalla */
+  overflow: hidden; /* Evita desbordamientos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el video para que cubra el espacio sin distorsionarse */
 }
 
 .video-text-overlay {
   position: absolute;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 44px;
   font-weight: bold;
   text-align: center;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.5); /* Fondo más oscuro para mejor visibilidad */
   padding: 10px 20px; 
-  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .video-text-overlay h2 {
   font-size: 100px;
+  margin: 0;
 }
 
 
@@ -335,6 +374,44 @@
   width: 70%;
   text-align: center;
 }
+
+
+.detail-panel_cards2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgb(0, 0, 0), #4c3c0f); /* Degradado dorado */
+  opacity: 0.75; /* Opacidad ajustable para el fondo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+  color: white;
+}
+
+.detail-panel_cards2 p {
+  font-size: 2vw; /* Tamaño de texto responsivo */
+}
+
+.detail-panel_cards2 button {
+  background-color: white;
+  color: black;
+  padding: 1% 3%;
+  font-size: 1.5vw;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.detail-panel_cards2 button:hover {
+  background-color: #f7e1a5; /* Cambio de color al pasar el mouse */
+}
+
 
 .detail-panel_product{
   position: fixed;
@@ -512,7 +589,7 @@
 
 .blog-section .card h3 {
   font-size: 1.05rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #333;
   margin-bottom: 0.5rem;
 }
