@@ -345,7 +345,7 @@
   padding: 10px;
   box-shadow: 10px 1px 500px rgba(0, 0, 0, 1);
   z-index: 1000;
-  width: 55%;
+  width: 68%;
   text-align: center;
 }
 
@@ -353,18 +353,18 @@
 .product-info {
   display: flex;
   align-items: flex-start; /* Alineación a la parte superior */
-  gap: 40px;
+  gap: 10px;
 }
 
 .product-image {
-  margin: 5%;
-  width: 50%;
+  margin: 2%;
+  width: 100%;
   height: auto;
 }
 
 .details {
   margin: 5%;
-  max-width: 450px; /* Controlamos el ancho de los detalles */
+  max-width: 41.5%; /* Controlamos el ancho de los detalles */
   text-align: left;
 }
 

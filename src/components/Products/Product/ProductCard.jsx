@@ -54,20 +54,22 @@ const ProductCard = () => {
       {selectedProduct && (
         <div className="detail-panel_product">
           <div className="product-info" style={{ overflow: 'hidden', borderRadius: '0' }}>
-            <img 
-              src={`/Imagenes/productos/${selectedProduct.image_path}`} 
-              alt={selectedProduct.name} 
-              className="product-image"
-              style={{ 
-                width: '100%', 
-                height: 'auto', 
-                transform: 'scale(1.74)', 
-                transition: 'transform 0.3s ease-in-out', 
-                borderRadius: '0', 
-                objectFit: 'cover', 
-                border: 'none'  // Asegura que no haya borde alrededor de la imagen
-              }} 
-            />
+            <div className="product-image">
+              <img 
+                src={`/Imagenes/productos/${selectedProduct.image_path}`} 
+                alt={selectedProduct.name} 
+                
+                style={{ 
+                  width: '100%', 
+                  height: 'auto', 
+                  transform: 'scale(1.2)', 
+                  transition: 'transform 0.3s ease-in-out', 
+                  borderRadius: '0', 
+                  objectFit: 'cover', 
+                  border: 'none'  // Asegura que no haya borde alrededor de la imagen
+                }} 
+              />
+            </div>
             <div className="details">
               <h2 className="product-name">{selectedProduct.name}</h2>
               <p className="product-description">{selectedProduct.description}</p>
