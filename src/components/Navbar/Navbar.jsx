@@ -1,4 +1,3 @@
-import '../../assets/bootstrap.min.css';
 import logo from '../../assets/logo.png';
 
 const Navbar = () => {

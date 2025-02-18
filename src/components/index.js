@@ -4,7 +4,6 @@ export { default as BlogCard } from './Content/BlogCard';
 export { default as VideoCard } from './Content/VideoCard';
 export { default as TextContainer } from './Content/TextContainer';
 export { default as FooterBar } from './FooterBar/FooterBar';
-export { default as ProductModel } from './Content/ProductModal';
 export { default as ProductCard } from './Products/Product/ProductCard';
 export { default as InfoComponent } from './Content/BlogComponents/InfoComponent';
 export { default as PersonalInfo } from './Content/BlogComponents/PersonalInfo';

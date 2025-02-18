@@ -51,34 +51,60 @@ const ProductCard = () => {
         <p>Cargando productos...</p>
       )}
 
-      {/* Panel de detalles */}
       {selectedProduct && (
-        <div className="detail-panel">
-          <h2 className='card-content__textName'>{selectedProduct.name}</h2>
-          <img src={`/Imagenes/productos/${selectedProduct.image_path}`} alt={selectedProduct.name}/>
-          <p className='card-content__description'>{selectedProduct.description}</p>
-          <p className='card-content__category'>Categoría: {selectedProduct.category}</p>
-          {/* Botones para cambiar precio */}
-          <div className="price-buttons">
-            <p className='card-content__size'>Tamaños
-            {Object.entries(sizeOptions).map(([size, multiplier]) => (
-              <button 
-                key={size} 
-                onClick={() => { 
-                  setUpdatedPrice(selectedProduct.price * multiplier); 
-                  setSelectedSize(size); 
-                }}
-                disabled={selectedSize === size} //  botón seleccionado inactivo
-              >
-                {size.charAt(0).toUpperCase() + size.slice(1)}
-              </button>
-            ))}
-            </p>
+        <div className="detail-panel_product">
+          <div className="product-info" style={{ overflow: 'hidden', borderRadius: '0' }}>
+            <img 
+              src={`/Imagenes/productos/${selectedProduct.image_path}`} 
+              alt={selectedProduct.name} 
+              className="product-image"
+              style={{ 
+                width: '100%', 
+                height: 'auto', 
+                transform: 'scale(1.74)', 
+                transition: 'transform 0.3s ease-in-out', 
+                borderRadius: '0', 
+                objectFit: 'cover', 
+                border: 'none'  // Asegura que no haya borde alrededor de la imagen
+              }} 
+            />
+            <div className="details">
+              <h2 className="product-name">{selectedProduct.name}</h2>
+              <p className="product-description">{selectedProduct.description}</p>
+              <p className="product-category">Categoría: {selectedProduct.category}</p>
+
+              {/* Tamaños */}
+              <div className="size-selector">
+                <div className="size-buttons">
+                  <p>Tamaños</p>
+                  {Object.entries(sizeOptions).map(([size, multiplier]) => (
+                    <button 
+                      key={size} 
+                      onClick={() => { 
+                        setUpdatedPrice(selectedProduct.price * multiplier); 
+                        setSelectedSize(size); 
+                      }}
+                      className={`size-button ${selectedSize === size ? 'selected' : ''}`}
+                      disabled={selectedSize === size} 
+                    >
+                      {size.charAt(0).toUpperCase() + size.slice(1)}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <p className="product-price">Precio: ${updatedPrice.toFixed(2)}</p>
+
+              <button className="close-button" onClick={() => setSelectedProduct(null)}>Cerrar</button>
+            </div>
           </div>
-          <p className='card-content__price'>Precio: ${updatedPrice.toFixed(2)}</p>
-          <button onClick={() => setSelectedProduct(null)}>Cerrar</button>
         </div>
       )}
+
+
+
+
+
     </div>
   );
 };

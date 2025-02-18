@@ -35,8 +35,7 @@
 }
 
 .card {
-  width: 400px; /* Tamaño fijo Instagram */
-  height: auto;
+  width: 300px; /* Tamaño fijo Instagram */
   background: #fdf8f4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -56,12 +55,6 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
-  background-color: #382e16;
-  color: #FFFFFC;
-}
-
-.card-productFrame {
-  background-color: #dac6ad54;
 }
 
 .card-productFrame:hover {
@@ -171,25 +164,14 @@
 }
 
 .content-display__text {
-  position: relative;
-  width: 100%;
+  position: 'relative';
+  gap: 5px;
+  width: 100%; /* Ocupa todo el ancho disponible */
   text-align: center;
-  font-size: 4.5rem; /* Ajusté el tamaño para hacerlo más accesible y adaptable */
-  background-color: #b0a99f; /* Color de fondo más suave */
-  color: #fdfdfd; /* Blanco suave para mayor contraste */
-  padding: 20px; /* Espaciado interno para darle más espacio alrededor del texto */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
-  display: inline-block; /* Hace que el contenido se ajuste al tamaño del texto */
-  text-transform: uppercase; /* Texto en mayúsculas para un toque más elegante */
-  letter-spacing: 2px; /* Espaciado entre letras para mejorar la legibilidad */
-  transition: all 0.3s ease; /* Transición suave al pasar el ratón */
+  font-size: 100px ;
+  background-color: 	#958f86;
+  color: #FFFFFC;
 }
-
-.content-display__text:hover {
-  background-color: #8f8771; /* Cambia el fondo al pasar el ratón */
-}
-
 
 .video-container {
   position: relative;
@@ -311,143 +293,40 @@
 
 
 /* Hola este codigo es para el panel */
-/* Estilos globales */
-
 .detail-panel {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgb(255, 251, 247);
-  padding: 5px;
+  padding: 20px;
   box-shadow: 10px 1px 500px rgba(0, 0, 0, 1);
   z-index: 1000;
-  width: 25%;
+  width: 500px;
   text-align: center;
 }
 
-.detail-panel_cards {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(255, 251, 247);
-  padding: 5px;
-  box-shadow: 10px 1px 500px rgba(0, 0, 0, 1);
-  z-index: 1000;
-  width: 70%;
-  text-align: center;
-}
-
-.detail-panel_product{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(255, 251, 247);
-  padding: 10px;
-  box-shadow: 10px 1px 500px rgba(0, 0, 0, 1);
-  z-index: 1000;
-  width: 55%;
-  text-align: center;
-}
-
-
-.product-info {
-  display: flex;
-  align-items: flex-start; /* Alineación a la parte superior */
-  gap: 40px;
-}
-
-.product-image {
-  margin: 5%;
-  width: 50%;
+.detail-panel img {
+  max-width: 100%;
   height: auto;
-}
-
-.details {
-  margin: 5%;
-  max-width: 450px; /* Controlamos el ancho de los detalles */
-  text-align: left;
-}
-
-.product-name {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
+  padding: 5% ;
   margin-bottom: 10px;
-  text-transform: uppercase;
 }
 
-.product-description {
-  font-size: 1.5rem;
-  color: #666;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.product-category {
-  font-size: 1.5rem;
-  color: #999;
-  margin-bottom: 15px;
-}
-
-.size-selector {
-  font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 15px;
-}
-
-.size-buttons {
-  display: flex;
-  justify-content: start;
-  gap: 15px;
-}
-
-.size-button {
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: capitalize;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 0;
-}
-
-.size-button:hover {
-  background-color: #f2f2f2;
-}
-
-.size-button.selected {
-  background-color: #3b2503;
-  color: #fff;
-  border-color: #333;
-}
-
-.product-price {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.close-button {
-  background-color: #333;
-  color: #fff;
-  padding: 14px 35px;
+.detail-panel button {
+  margin-top: 10px;
+  margin: 7px;
+  background: #ff8521;
+  color: white;
   border: none;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  padding: 8px 12px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 0;
 }
 
-.close-button:hover {
-  background-color: #444;
+.price-buttons button:disabled {
+  opacity: 0.5; /* Hace el botón más transparente */
+  cursor: not-allowed; /* Cambia el cursor */
+  background-color: #583b21; /* Color gris para indicar deshabilitado */
 }
 
 
@@ -494,7 +373,7 @@
 /*aqui prueba blog*/
 
 .blog-section {
-  padding: 1.25rem;
+  padding: 2rem;
   /*background-color: #f7f7f7;*/
   margin-top: 20px;
 }
@@ -514,8 +393,8 @@
 }
 
 .blog-section .card h3 {
-  font-size: 1.05rem;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 600;
   color: #333;
   margin-bottom: 0.5rem;
 }

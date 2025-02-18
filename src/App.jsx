@@ -1,4 +1,5 @@
 import { React } from 'react';
+import '/src/assets/bootstrap.min.css';
 import { Navbar, BlogCard, VideoCard, TextContainer, ProductCard, FooterBar, ImageCard } from './components';
 import './App.css';
 import videoCocoa from './assets/video/video_cacao.mp4';
@@ -21,6 +22,7 @@ const App = () => {
             <p>Un chocolate, una sensación</p>
           </div>
         </div>
+
         <div className='content-display'>
           <BlogCard 
             text="Chocolates PREMIUM y libres de GLUTEN"
@@ -44,7 +46,8 @@ const App = () => {
             text="Productos Gluten Free!"
           />
         </div>
-        <div className='content-display__picture content-pattern-background'>
+        
+        <div className='content-pattern-background'>
           <ProductCard />
         </div>
 
@@ -62,7 +65,7 @@ const App = () => {
           <img 
           src="/Imagenes/productos/1.png" 
           alt="Producto 1" 
-          style={{ width: '500px', borderRadius: '10px' }} 
+          style={{ width: '600px', borderRadius: '10px' }} 
           />
           <h1 className="elegant-title">Soy Carla Olivares</h1>
         </div>
@@ -78,7 +81,7 @@ const App = () => {
           <TextContainer 
             text="Motivate!"
           />
-          <div className='content-display'>
+          <div className='content-display__blog'>
             <ImageCard 
               nameText="Hecho a mano con amor"
               logo="/Imagenes/productos/3.jpeg"
@@ -117,28 +120,6 @@ const App = () => {
           </div>
         </div>
 
-
-        {/* <div className='content-pattern-background2'>
-          <TextContainer 
-            text="Conoce más en mis redes!"
-          />
-          <div className='content-display'>
-            <ImageCard 
-              nameText="Más videos en tiktok"
-              logo="/Imagenes/productos/tiktok.png"
-            />
-            <ImageCard 
-              nameText="Inspirate en Instagram"
-              logo="/Imagenes/productos/instagram.png"
-            />
-            <ImageCard 
-              nameText="Mis pensamientos en Threads"
-              logo="/Imagenes/productos/threads.png"
-            />
-            
-  
-          </div>
-        </div> */}
         
 
       </div>
