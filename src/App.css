@@ -35,7 +35,7 @@
 }
 
 .card {
-  width: 400px; /* Tamaño fijo Instagram */
+  width: 300px; /* Tamaño fijo Instagram */
   height: auto;
   background: #fdf8f4;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -206,7 +206,7 @@
   font-size: 44px;
   font-weight: bold;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.1);
   padding: 10px 20px; 
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -215,9 +215,6 @@
   font-size: 100px;
 }
 
-.video-text-overlay p:hover{
-  color: #ffffff; 
-}
 
 
 .content-pattern-background {
@@ -663,4 +660,8 @@ div {
   clip-path: none !important;
   mask-image: none !important;
   border: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
 }
