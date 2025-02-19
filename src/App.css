@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
 #root {
   max-width: 100% auto;
   margin: auto;
@@ -382,7 +384,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgb(0, 0, 0), #4c3c0f); /* Degradado dorado */
+  background: linear-gradient(45deg, rgb(212, 175, 55, 0.4), #4c3c0f); /* Degradado dorado */
   opacity: 0.75; /* Opacidad ajustable para el fondo */
   display: flex;
   flex-direction: column;
@@ -569,13 +571,13 @@
 
 .blog-section {
   padding: 1.25rem;
-  /*background-color: #f7f7f7;*/
-  margin-top: 20px;
+  background-color: #ffffff;
+  margin-top: 40px;
 }
 
 .blog-section .card {
   width: 100%; /* Se ajusta automáticamente */
-  background-color: #fff3eb;
+  background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   text-align: center;
@@ -631,9 +633,9 @@
 /*}*/
 
 /* Asegurando que las tarjetas no se vean afectadas por otros estilos */
-.blog-section .card-productFrame {
+/*.blog-section .card-productFrame {
   /* No afectado por .card-productFrame en otro lugar */
-}
+/*}*/
 
 .blog-section .grid {
   display: grid;
@@ -666,17 +668,19 @@
 }
 
 .blog-section .card h3 {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  color: white; /* Hace que el texto sea visible */
-  margin-bottom: 0.5rem;
+  font-family: 'Playfair Display', serif; /* Aplicando la fuente elegante */
+  color: rgba(0, 0, 0, 0.5); /* Hace que el texto sea visible */
+  /*margin-bottom: 0.5rem;*/
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: -10px;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho de la imagen */
+  /*transform: translateX(-50%);*/
   text-align: center;
-  background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.7); /* Fondo oscuro semitransparente */
+  padding: 0;
 }
 
 
@@ -716,6 +720,51 @@
   border-bottom: 3px solid #d4af37; /* Línea dorada abajo */
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+}
+
+/*h2 elegante*/
+
+.elegant-subtitle {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem; /* Tamaño ligeramente más pequeño que el h1 */
+  font-weight: 500;
+  color: #6b5b4d; /* Un tono marrón más suave */
+  text-transform: uppercase;
+  letter-spacing: 1px;/*espacion entre letras*/
+  /*margin-top: 10px;*/
+  text-align: center;
+  
+  background: linear-gradient(to right, #c19a6b, #b87333); /* Un degradado cobre-dorado */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Ligera sombra */
+  /*border-top: 2px solid #c19a6b; /* Línea elegante arriba */
+  padding-top: 10px;
+}
+
+
+.elegant-message {
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #7a6f64; /* Un marrón suave que combina con el resto */
+  margin-top: 10px;
+  text-align: center;
+  max-width: 600px; /* Limita el ancho para que no se desborde */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6; /* Mejora la legibilidad */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  padding: 0 20px; /* Agrega un pequeño espacio lateral */
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Solo apila el título y el mensaje */
+  align-items: center;
+  margin-top: 10px;
 }
 
 

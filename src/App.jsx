@@ -93,11 +93,16 @@ const App = () => {
   
           <div className="background-div">
             <img 
-            src="/Imagenes/productos/1.png" 
+            src="/Imagenes/productos/01.png" 
             alt="Producto 1" 
-            style={{ width: '600px', borderRadius: '10px' }} 
+            style={{ width: '320px', borderRadius: '10px' }} 
             />
+            <div className="text-container">
             <h1 className="elegant-title">Soy Carla Olivares</h1>
+            <h2 className="elegant-subtitle">"Mama, esposa, emprendedora y sobreviviente."</h2>
+            <p className="elegant-message">"Carla Olivares R. es una madre y esposa emprendedora
+              que tras superar numerosas adversidades hoy se destaca como una vendedora sobreviviente."</p>
+            </div>
           </div>
   
           <div className='content-pattern-background'>

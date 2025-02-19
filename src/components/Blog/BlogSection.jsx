@@ -45,8 +45,8 @@ const BlogSection = () => {
           >
             {/* Mostrar el título solo si NO está en hover */}
             {hoveredId !== id && (
-              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center transition-opacity duration-300">
-                <h3 className="text-white text-xl font-semibold text-center">{title}</h3>
+              <div className="absolute inset-0 transition-opacity duration-300">
+                <h3 className="">{title}</h3>
               </div>
             )}
 
