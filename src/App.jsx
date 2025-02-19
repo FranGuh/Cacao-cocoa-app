@@ -32,24 +32,37 @@ const App = () => {
             </div>
           </div>
           
+          <div className='content-pattern-background'>
+            <div className='content-display'>
+              <BlogCard 
+                text="Chocolates PREMIUM y libres de GLUTEN"
+                autor="cacao.cocoa"
+                source="@cacao.cocoa_with_cause"
+              />
+              <BlogCard 
+                text="Pasión al alcance de un bocadillo sano"
+                autor="cacao.cocoa2"
+                source="@cacao.cocoa_with_cause"
+              />
+              <BlogCard 
+                text="Para el paladar más exigente"
+                autor="cacao.cocoa3"
+                source="@cacao.cocoa_with_cause"
+              />
+            </div>
 
-          <div className='content-display'>
-            <BlogCard 
-              text="Chocolates PREMIUM y libres de GLUTEN"
-              autor="cacao.cocoa"
-              source="@cacao.cocoa_with_cause"
-            />
-            <BlogCard 
-              text="Pasión al alcance de un bocadillo sano"
-              autor="cacao.cocoa2"
-              source="@cacao.cocoa_with_cause"
-            />
-            <BlogCard 
-              text="Para el paladar más exigente"
-              autor="cacao.cocoa3"
-              source="@cacao.cocoa_with_cause"
-            />
+            <div>
+              <TextContainer 
+                text="Productos Gluten Free!"
+              />
+            </div>
+            
+            <div className=''>
+              <ProductCard limite="3"/>
+            </div>
           </div>
+
+          
         </section>
         )}
         

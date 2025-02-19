@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { ImageCard } from '../../index';
 
-const ProductCard = () => {
+const ProductCard = ({ limite }) => {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null); // Estado para producto seleccionado
   const [updatedPrice, setUpdatedPrice] = useState(null);
@@ -15,12 +15,14 @@ const ProductCard = () => {
         return response.json();
       })
       .then(data => {
-        if (isMounted) setProducts(data);
+        if (isMounted) {
+          setProducts(limite ? data.slice(0, limite) : data); 
+        }
       })
       .catch(error => console.error('Error al obtener productos:', error));
 
     return () => { isMounted = false; }; // Cleanup para evitar fugas de memoria
-  }, []);
+  }, [limite]);
 
   const handleSelectProduct = (product) => {
     setSelectedProduct(product);
@@ -51,7 +53,7 @@ const ProductCard = () => {
         <p>Cargando productos...</p>
       )}
 
-      {selectedProduct && (
+      {selectedProduct && Number (limite) !== 3 && (
         <div className="detail-panel_product">
           <div className="product-info" style={{ overflow: 'hidden', borderRadius: '0' }}>
             <div className="product-image">
@@ -66,7 +68,7 @@ const ProductCard = () => {
                   transition: 'transform 0.3s ease-in-out', 
                   borderRadius: '0', 
                   objectFit: 'cover', 
-                  border: 'none'  // Asegura que no haya borde alrededor de la imagen
+                  border: 'none'  
                 }} 
               />
             </div>
@@ -102,10 +104,6 @@ const ProductCard = () => {
           </div>
         </div>
       )}
-
-
-
-
 
     </div>
   );

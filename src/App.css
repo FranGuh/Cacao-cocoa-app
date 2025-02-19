@@ -204,7 +204,7 @@
   width: 100%;
   text-align: center;
   font-size: 3.7rem; /* Ajusté el tamaño para hacerlo más accesible y adaptable */
-  background-color: #b0a99f; /* Color de fondo más suave */
+  background-color: #564021; /* Color de fondo más suave */
   color: #fdfdfd; /* Blanco suave para mayor contraste */
   padding: 20px; /* Espaciado interno para darle más espacio alrededor del texto */
   border-radius: 10px; /* Bordes redondeados */
@@ -216,7 +216,7 @@
 }
 
 .content-display__text:hover {
-  background-color: #8f8771; /* Cambia el fondo al pasar el ratón */
+  background-color:  #382e16;
 }
 
 .video-container {

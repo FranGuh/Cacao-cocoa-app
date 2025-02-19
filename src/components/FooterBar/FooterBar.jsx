@@ -4,8 +4,9 @@ const FooterBar = () => {
   return (
     <footer className="footer">
       <div className="row">
-        {/* <a href="#"><i className="fa fa-facebook">  Facebook</i></a>
-        <a href="#"><i className="fa fa-instagram">  Instagram</i></a> */}
+        <a>Nuestras Redes!</a>
+        <a href="#"><i className="fa fa-facebook">  Facebook</i></a>
+        <a href="https://www.instagram.com/cacao.cocoa_with_cause?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i className="fa fa-instagram">  Instagram</i></a>
       </div>
 
       <div className="row">
